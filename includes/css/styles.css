@@ -61,13 +61,14 @@
   #book-btn:hover,
   #about-btn:hover, #enquiries-btn:hover {
     background-color: #ff1e00;
-    color: black;
+    color: white;
     cursor: pointer;
   }
   #contact-btn {
     background-color: #ff1e00;
     color: black;
     height: 40px;
+
   }
   
   #contact-btn:hover {
@@ -283,7 +284,7 @@
   .contact-form textarea {
     width: 100%;
   }
-  .about-'page'{
+  .about-page{
     height: fit-content;
   }
   
@@ -298,16 +299,14 @@
     text-align: center;
   }
   .viewing-section{
-    width: 1000px;
-    margin: 40px auto 100px;
-    display: grid;
-    gap:10px;
-    
+    width: 950px;
+    height: max-content;
+    margin: 50px auto;
   }
   
-  .vewing-pictures{
-  background-color: white;
-  height: fit-content;
+  .viewing-section img{
+    width: 950px;
+    height:450px;
   }
   
   .viewing-refund{
@@ -350,6 +349,11 @@
     cursor: pointer;
 
   }
+  .overlay-btn a{
+text-decoration: none;
+color:white;
+  }
+  
   footer{
     height: 200px;
     background-color: #ff1e00;
