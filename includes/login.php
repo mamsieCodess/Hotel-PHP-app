@@ -11,8 +11,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($result->num_rows == 1) {
         $user = $result->fetch_assoc();
+        $id = $user['user_id'];
         session_start();
-        $_SESSION['userId'] = $user['id'];
+        $_SESSION['userId'] = $user['user_id'];
         header('location:.././index.php');
         exit;
 
