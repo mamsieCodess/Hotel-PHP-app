@@ -1,7 +1,6 @@
-
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,15 +28,19 @@
                     <li><a href="index.php">Home</a></li>
                     <li><a href="#about-section">About</a></li>
                     <li><a href="#hotel-section">Hotels</a></li>
-                    <li><a href="#news">News</a></li>
                     <li><a href="#contact-section">Contact</a></li>
                 </ul>
             </div>
-            <form action="index.php" method="post">
-                <div>
-                    <input type="submit" value="BOOK NOW" id="book-btn" />
+          
+                <div style="margin-top:10px;" >
+                <?php if (!isset($_SESSION['userId']) ):?>
+                <a style="padding:15px;" href="includes/login.php" id="book-btn" >Login</a>
+                <?php endif;?>
+
+                <?php if (isset($_SESSION['userId']) ):?>
+                    <a style="padding:15px;" href="includes/logout.php"id="book-btn" >Logout</a>
+                    <?php endif;?>
                 </div>
-            </form>
             <div></div>
         </div>
     </div>
