@@ -25,19 +25,16 @@ $hotels = $result->fetch_all(MYSQLI_BOTH);
         <p class="hero-heading">Book your next hotel with us ...</p>
     </div>
     <div class="hero-btns">
-        <form action="index.php">
-            <input type="submit" href="#" value="Read More" id="about-btn" />
-            <input type="submit" href="#" value="Contact Us" id="contact-btn" />
-        </form>
+        <a id="about-btn" href="#about-section">Read More</a>
+        <a id="contact-btn" href="#contact-section">Contact Us</a>
     </div>
 </section>
 <section class="hotel-section" id="hotel-section">
     <div class="capetown-section">
-        <div class="section-heading-wrapper">
-            <p class="section-subheading">Hotels in Cape Town</p>
+        <div class="section-heading-wrapper" style="margin-bottom:0">
+            <p class="section-subheading" style="margin-bottom:0">Hotels in Cape Town</p>
         </div>
-
-        <div class="hotel-products">
+        <div class="hotel-products"style="margin-top:0">
             <?php
             $_SESSION['hotels'] = [];
             foreach ($hotels as $hotel) {
