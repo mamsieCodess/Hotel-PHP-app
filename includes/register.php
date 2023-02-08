@@ -11,6 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
+
     //firstly check if the person with such details exist
     $sql = "SELECT `*` FROM `users` WHERE `email` = '$email' AND `password` = '$password'";
     $result = $conn->query($sql);
@@ -28,6 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
          $_SESSION['lastname'] = $lastname;
          $_SESSION['email'] = $email;
          $_SESSION['password'] = $password;
+         $_SESSION['userId'] = $user['user_id'];
         $stmt->execute();
         header('location:.././index.php');
     }
