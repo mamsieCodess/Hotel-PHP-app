@@ -12,8 +12,7 @@
   .header {
     display: flex;
     justify-content: space-between;
-    height: max-content;
-    padding: 0px 30px;
+    padding: 20px 30px 10px ;
     position:sticky;
     top: 0;
     z-index: 9999;
@@ -173,12 +172,15 @@
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
+    margin-bottom: 0;
   }
   .hotel-products {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     font-family: "Lexend Giga", sans-serif;
+    width: 100%;
+    margin:0 auto;
   }
   .hotel-product {
     width: 300px;
@@ -240,14 +242,17 @@
   }
   .amenities{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     padding:0 30px;
     margin: 0;
+    font-size: small;
+    text-align: center;
   }
   .amenities li{
     list-style-type: none;
     margin: 5px;
-    font-size: 15px;
+    font-size: small;
+
   }
   .overlay-price{
   font-weight:900;
@@ -313,21 +318,8 @@
   color: green;
   font-weight: 700;
   }
-  
-  #reservation-btn{
-    background-color: #ff1e00;
-    height: 45px;
-    border: none;
-    text-align: center;
-    font-weight: 900;
-    color: white;
-    float:left;
-  }
-  
-  #reservation-btn:hover{
-    border: 3px solid white;
-    cursor: pointer;
-  }
+
+
   #calculator-form{
   border: 3px solid #ff1e00;
   padding:10px;
@@ -364,4 +356,22 @@ color:white;
   }
   .footer-text{
    padding-top:50px;
+  }
+  
+  .hero-btns a {
+    width: 150px;
+    border: none;
+    text-align: center;
+    font-weight:bolder;
+    color: white;
+    float:left;
+    font-family: "Lexend Giga", sans-serif;
+    padding-top:10px;
+    text-decoration: none;
+    background-color: #ff1e00;
+  }
+  
+  .hero-btns a:hover{
+    border: 3px solid white;
+    cursor: pointer;
   }
