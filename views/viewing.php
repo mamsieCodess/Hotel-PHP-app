@@ -42,6 +42,27 @@ if (isset($_GET['id'])) {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Lexend+Giga:wght@400;600&family=Montserrat+Alternates&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../includes/css/styles.css">
+  <style>
+   
+    .reservation-btn a{
+    width: 150px;
+    border: none;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 900;
+    color: white;
+    float:left;
+    padding: 18px;
+    text-decoration: none;
+    background-color: #ff1e00;
+    margin-bottom: 50px;
+  }
+  
+  .reservation-btn a:hover{
+    border: 3px solid white;
+    cursor: pointer;
+  }
+  </style>
 
 </head>
 
@@ -55,7 +76,7 @@ if (isset($_GET['id'])) {
     <div class="viewing-information">
       <p class="section-heading"><?php echo $newHotel->getName(); ?></p>
       <p class="viewing-description"><?php echo $newHotel->getDescription(); ?></< /p>
-      <p class="viewing-refund">Fully Refundable</p>
+      <p class="viewing-refund"><?php echo $newHotel->displayRefundability(); ?></p>
       <div>
         <p class="section-subheading">Amenities:</p>
         <ul class="amenities">
@@ -93,10 +114,12 @@ if (isset($_GET['id'])) {
         <input type="submit" id="calculate-button" value="Calculate" name="submit" />
       </form>
 
-      <form action="GET">
-        <input type="submit
-      " value="BOOK" id="reservation-btn" />
-        <button id="make-booking-button"><a href="booking-page.php?id=<?php echo htmlspecialchars($newHotel->getId()) ?>">Book</a></button>
+      <div class="reservation-btn">
+        <a href="booking.php?id=<?php echo htmlspecialchars($newHotel->getId()) ?>">Book</a>
+      </div>
+
+
+
       </form>
     </div>
   </div>
