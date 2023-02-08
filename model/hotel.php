@@ -106,6 +106,29 @@ class Hotel{
 function amountDue($daily_rate,$days){
     return $daily_rate * $days;
 }
+public function sellHeels() {
+
+    if ($this->refundability) {
+    
+        $this->refundability = 'yes';
+        return true;
+
+    } else {  
+        return false;
+    }
+}
+
+public function displayRefundability() {
+
+    if ( $this->refundability == 'yes' ) {
+        return "<p style='color:green; font-weight:900'>Fully Refundable</p>";
+        
+    } else if( $this->refundability == 'no') {
+        return "<p style='color:red; font-weight:900'>Not Refundable</p>";
+    }
+}
+
+
 
 
 }
