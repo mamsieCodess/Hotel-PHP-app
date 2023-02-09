@@ -22,7 +22,7 @@ $hotels = $result->fetch_all(MYSQLI_BOTH);
 <section class="home-hero">
     <div class="hero-background">
         <img src="./includes/images/manuel-moreno-DGa0LQ0yDPc-unsplash.jpg" />
-        <p class="hero-heading">Book your next hotel with us ...</p>
+        <p class="hero-heading"> Book your next hotel with us ...</p>
     </div>
     <div class="hero-btns">
         <a id="about-btn" href="#about-section">Read More</a>
@@ -59,7 +59,7 @@ $hotels = $result->fetch_all(MYSQLI_BOTH);
                     <p class="product-description"><?php echo $hotel->getDescription() ?></p>
                     <div class="overlay">
                         <div class="text">
-                            <h2><?php echo $hotel->getLocation() ?></h2>
+                            <h2><?php echo $hotel->getName()?></h2>
                             <h4><?php echo $hotel->getDescription() ?></h4>
                             <div>
                                 <p>Popular amenities:</p>
